@@ -1,0 +1,5 @@
+1，for循环：array.fori=for(int i =0;i<array.length;i++){}
+2,Ctrl+y  删除本行
+3，Ctrl+d 向下复制本行
+4,Ctrl+Alt+L :代码格式标准化
+5,shift+F6 改变所有同名的变量
