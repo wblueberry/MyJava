@@ -33,6 +33,8 @@ public class Demo05ArrayListReturn {
 
         //打印小集合里面的元素
         ArrayList<Integer> list1 = getSmallList(bigList);
+
+        System.out.println("偶数的个数："+list1.size());
         System.out.print("[");
         for (int i = 0; i < list1.size(); i++) {
 
