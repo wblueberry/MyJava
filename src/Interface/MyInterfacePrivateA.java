@@ -28,7 +28,7 @@ public interface MyInterfacePrivateA {
 //        System.out.println("BBB");
     }
     //抽取共同元素
-    public default void methodCommon(){
+    private void methodCommon(){//私有方法，只有本类的方法能调用
         System.out.println("AAA");
         System.out.println("BBB");
     }
