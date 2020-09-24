@@ -1,4 +1,7 @@
 package T2.File;
+
+import java.io.File;
+
 /*
 java.io.File类
 文件和目录路径名的抽象表达形式
@@ -14,4 +17,15 @@ File是一个与系统无关的类，任何的操作系统都可以使用这个�
 
  */
 public class Demo01File {
+    public static void main(String[] args) {
+        //操作路径：路径不能写死了
+        //分隔符可以用File.separator代替
+
+        String pathSeparator = File.pathSeparator;
+        System.out.println(pathSeparator);//路径分隔符  window下是分号，linux是冒号
+
+
+        String separator = File.separator;
+        System.out.println(separator);//文件名称分隔符  window下是一个反斜杠\ linux是正斜杠/
+    }
 }
