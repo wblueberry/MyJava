@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1642118_ptaoe71mbkm.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1677919_m75qgzxr5z.css">
+
+</head>
+<body>
+<!--页面头部-->
+<div class="header">
+    <div class="h-box">
+        <h1 class="logo">
+            <a href="#"class="logo_title"></a>
+        </h1>
+        <ul class="menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">在线课堂</a></li>
+            <li><a href="#">付费课堂</a></li>
+            <li><a href="#">搜索</a></li>
+        </ul>
+        <!--阿里图标-->
+        <div class="l-box">
+            <span class="iconfont icon-user"></span>
+            <span><a href="#">注册</a></span>
+            <span><a href="#">登录</a></span>
+        </div>
+    </div>
+</div>
+<!--页面主体-->
+<!--大盒子-->
+<div id="container">
+    <!--中盒子-->
+    <div id="content">
+        <!--主体左边-->
+        <div class="cont_left">
+            <!--轮播图-->
+            <div id="div1">
+                <!--左右箭头-->
+                <ul id="ul1">
+                    <li class="li_1"><span class="span_1" style="left: 0" onclick="last()">&lt;</span></li>
+                    <li class="li_1"><span class="span_1" style="right: 0" onclick="first()">&gt;</span></li>
+                </ul>
+                <!--四个小圆框-->
+                <ul id="ul2">
+                    <li class="li1"></li>
+                    <li class="li1"></li>
+                    <li class="li1"></li>
+                    <li class="li1"></li>
+                </ul>
+            </div>
+            <!--课程介绍-->
+            <div id="div2">
+                <ul class="div2_ul">
+                    <li>
+                        <a href="javascript:void (0)">
+                            <img src="images/a.jpg" >
+                        </a>
+                        <p><a href="javascript:void (0)">SEO优化，最新排名技巧解答分享</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)">
+                            <img src="images/b.jpg" >
+                        </a>
+                        <p><a href="javascript:void (0)">web前段零基础入门</a></p>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)">
+                            <img src="images/c.jpg" >
+                        </a>
+                        <p><a href="javascript:void (0)">韩语小白变大神</a></p>
+                    </li>
+                </ul>
+            </div>
+            <!--老师介绍-->
+            <div id="tab">
+                <!--切换导航-->
+                <div class="tab_menu">
+                    <ul>
+                        <li class="change"><a href="javascript:void(0)">语言</a></li>
+                        <li><a href="javascript:void(0)">前端</a></li>
+                        <li><a href="javascript:void(0)">Python</a></li>
+                        <li><a href="javascript:void(0)">C++</a></li>
+                    </ul>
+                </div>
+                <!--切换内容-->
+                <div class="tab_box">
+                    <div id="tb1">
+                        <!--上半部分-->
+                        <div class="tb1top">
+                            <!--上左-->
+                            <div class="tb_left">
+                                <img src="images/c.jpg" alt="">
+                            </div>
+                            <!--上右-->
+                            <div class="tb_right">
+                                <p><span>可里：</span>大学韩国语专业 亚篮锦标赛韩语随同翻译 3年线上韩语教育经验</p>
+                                <p><span>小美：</span>大学韩语专业 韩语TOPIK6级 三年线上教学经验</p>
+                                <p><span>鸭梨</span>大学韩国语专业 2年线上韩语教学经验 多年韩国漫画翻译经验</p>
+                                <p><span>可可：</span>韩语随同翻译 牙科医疗反映 丰富口译经验 多年爱豆站姐翻译经验</p>
+                            </div>
+                        </div>
+                        <!--下半部分-->
+                        <div class="tb1bot">
+                            <!--下左-->
+                            <div class="tb_left">
+                                <img src="images/d.jpg" alt="">
+                            </div>
+                            <!--下右-->
+                            <div class="tb_right">
+                                <p><span>Kayee:</span>口语水平优秀 语言表达能力强 教学经验丰富 对学员有耐心</p>
+                                <p><span>Celin:</span>课堂活泼有趣 注重和学员互动 轻轻松松帮大家理解英语知识</p>
+                                <p><span>Molly:</span>商务英语专业 对学员耐心 喜欢发掘不同类型的英语应用</p>
+                                <p><span>Zoey:</span>口语水平优秀 语言表达能力强 注重培养学员的口语能力和书写能力</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tb2">2</div>
+                    <div id="tb3">3</div>
+                    <div id="tb4">4</div>
+                </div>
+            </div>
+            <!--加载更多-->
+            <div id="more">
+                <div class="m1">加载更多</div>
+            </div>
+        </div>
+        <!--主体右边-->
+        <div id="other">
+            <div class="th">
+                <h2 class="left">公开课</h2>
+                <span class="right">更多</span>
+                <div class="th1">
+                    <img src="images/l1.jpg" >
+                    <p>Python零基础入门到项目实战</p>
+                    <hr>
+                </div>
+                <h2 class="left">VIP课</h2>
+                <span class="right">更多</span>
+                <div class="th2">
+                    <img src="images/l2.jpg">
+                    <p>Python基础</p>
+                    <p>Python进阶</p>
+                    <p>Python web前端</p>
+                    <p>Python 爬虫</p>
+                    <p>Python web开发</p>
+                    <hr>
+                </div>
+                <div class="th3">
+                    <h2>关注我</h2>
+                    <ul>
+                        <li class="iconfont icon-weixin">wj1935124245</li>
+                        <li class="iconfont icon-qq">201954367</li>
+                        <li class="iconfont icon-weibo">hahah<span class="right">扫码关注</span></li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="th4">
+                    <h2>热门推荐</h2>
+                    <div class="th4_news">
+                        <div>湖南信息技术类中高职衔接培训班来访潭州，探索互联网+教育新模式</div>
+                        <p><span class="left">热点</span><span class="right">10：24</span></p>
+                        <img src="images/p.jpg" >
+                    </div>
+                    <div class="th4_news">
+                        <div>湖南信息技术类中高职衔接培训班来访潭州，探索互联网+教育新模式</div>
+                        <p><span class="left">热点</span><span class="right">10：24</span></p>
+                        <img src="images/p.jpg" >
+                    </div>
+                    <div class="th4_news">
+                        <div>湖南信息技术类中高职衔接培训班来访潭州，探索互联网+教育新模式</div>
+                        <p><span class="left">热点</span><span class="right">10：24</span></p>
+                        <img src="images/p.jpg" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面尾部-->
+<div class="footer">
+    <div class="f_logo">
+        <p>
+            <span>关于Python</span>
+            <span>Python开发</span>
+            <span>数分析</span>
+            <span>关于据我</span>
+        </p>
+        <p>地址：湖南长沙市岳麓区 联系方式：400-1567-315</p>
+    </div>
+    <div class="f_bottom">
+        <p>Copyright @ 2015-2018 潭州Python学院，All Right Reserved</p>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

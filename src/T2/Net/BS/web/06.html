@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .clock{
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            position: relative;
+            background: url("images/date1.jpg") no-repeat;
+        }
+        .clock div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            /*left: 47.5%;*/
+            left: 0;
+            background: url("images/date4.png") no-repeat center;
+        }
+
+        #m{
+            background: url("images/date3.png") no-repeat center;
+        }
+        #s{
+             background: url("images/date2.png") no-repeat  center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="clock">
+    <div id="h"></div>
+    <div id="m"></div>
+    <div id="s"></div>
+</div>
+
+<script>
+    var h = document.getElementById("h");
+    var m = document.getElementById("m");
+    var s = document.getElementById("s");
+
+    function time() {
+        var today = new Date();
+        a = today.getHours();
+        // document.write(a);
+        // h.style.transform = "rotate(10deg)"
+        // 每小时  360/12  30度/小时
+        h.style.transform = "rotate(" + a *30 +"deg)";
+        // 每分钟  360/60  6度/分钟
+        m.style.transform = "rotate(" + today.getMinutes() *6 +"deg)";
+        // 每秒  360/60  6度/秒
+        s.style.transform = "rotate(" + today.getSeconds() *6 +"deg)";
+
+    }
+
+    setInterval(" time()",1000)
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+/*页面头部*/
+/**{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+.header{
+    width: 100%;
+    height: 69px;
+    background-color: black;
+}
+.h-box{
+    width: 1200px;
+    height: 69px;
+    margin: auto;
+    background-color: black;
+}
+.logo{
+    width: 235px;
+    height: 69px;
+    float: left;
+}
+.logo .logo_title{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.python.org/static/img/python-logo.png");
+}
+.menu{
+    float: left;
+    line-height: 69px;
+    margin-left: 100px;
+}
+.menu li{
+    float: left;
+    height: 69px;
+    /*list-style: none;*/
+    padding: 0 30px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+/*阿里图标*/
+.l-box{
+    height: 69px;
+    float: right;
+    line-height: 69px;
+    /*background-color: grey;*/
+}
+.l-box span a{
+    color:white;
+    text-decoration: none;
+}
+.icon-user:before{
+    color:red;
+    font-size: 30px;
+}
+
+/*页面主体*/
+/*大盒子*/
+#container{
+    width:100%;
+    padding: 30px;
+    background-color: gainsboro;
+}
+/*中盒子*/
+#content{
+    height: 1200px;
+    width:1200px;
+    background-color: darkgray;
+    margin: auto;
+}
+/*主体左边*/
+.cont_left{
+    width: 800px;
+    height: 1200px;
+    background-color: darkgreen;
+    float: left;
+}
+
+
+/*轮播图*/
+#div1{
+    width: 800px;
+    height: 180px;
+    position: relative;
+    /*border: 1px solid red;*/
+    background: url("https://res.shiguangkey.com//file/201806/19/20180619142252602590185.jpg");
+    background-size: 800px 180px;
+    transition: 2s;
+}
+/*左右箭头*/
+#div1 #ul1 li span{
+    font-size: 60px;
+    display: none;
+    position: absolute;
+    top: 50px;
+}
+ #div1 #ul1 li:hover{
+     cursor: pointer;
+ }
+/*四个小圆框*/
+#div1 #ul2{
+    position: absolute;
+    left: 320px;
+    top: 140px;
+}
+#div1 #ul2 li{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 10px;
+    /*border-radius: 50%;*/
+    background-color: blueviolet;
+    border: 1px solid red;
+}
+#div1 #ul2 .li1:hover{
+    cursor:pointer;
+}
+
+/*课程介绍*/
+#div2{
+    width: 800px;
+    height:210px;
+    background-color: blueviolet;
+}
+#div2 .div2_ul li{
+    width: 250px;
+    height: 210px;
+    float: left;
+    font-size: 12px;
+    margin-left: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+#div2 .div2_ul li a{
+    display: block;
+    color:black;
+    text-decoration: none;
+    overflow: hidden;
+}
+#div2 .div2_ul li img{
+    width: 100%;
+    height:100%;
+    /*慢速放大*/
+    transition: 2s;
+}
+/*鼠标放上去的效果*/
+#div2 .div2_ul li img:hover{
+    transform: scale(1.2);
+}
+#div2 .div2_ul p{
+    line-height: 30px;
+}
+
+/*老师介绍*/
+#tab{
+    width:800px;
+    height:460px;
+    background-color: rebeccapurple;
+}
+
+/*切换导航*/
+.tab_menu{
+    width:100%;
+    height: 60px;
+    background-color: lawngreen;
+}
+.tab_menu ul li{
+    float: left;
+    width:80px;
+    height: 36px;
+    text-align: center;
+}
+/*下边框线*/
+/*.tab_menu ul li:hover{*/
+    /*border-bottom: 4px solid red;*/
+/*}*/
+.change{
+    border-bottom: 4px solid red;
+}
+
+.tab_menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*切换内容*/
+.tab_box{
+    width:800px;
+    height: 400px;
+    background-color: peachpuff;
+}
+/*第一个盒子*/
+.tab_box #tb1{
+    width: 100%;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+/*上半部分*/
+.tb1top{
+    width: 100%;
+    height: 50%;
+    float: left;
+    /*background-color: chocolate;*/
+}
+/*上左*/
+.tb_left{
+    width: 260px;
+    height: 200px;
+    float: left;
+    /*background-color: rosybrown;*/
+}
+/*上左图片*/
+.tb_left img{
+    width: 240px;
+    height: 190px;
+    margin-top: 5px;
+    margin-left: 8px;
+    border-radius: 10%;
+}
+/*上右*/
+.tb_right{
+    width: 540px;
+    height: 200px;
+    float: right;
+    /*background-color: darkorange;*/
+}
+/*上右文字*/
+.tb_right span{
+    color:red;
+    
+}
+.tb_right p{
+    font-size: 16px;
+    margin-top: 26px;
+}
+/*下半部分*/
+.tb1bot{
+    width: 100%;
+    height: 50%;
+    float: left;
+    /*background-color: darkmagenta;*/
+}
+/*第二个盒子*/
+.tab_box #tb2{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rebeccapurple;
+}
+
+/*第三个盒子*/
+
+.tab_box #tb3{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rebeccapurple;
+}
+
+/*第四个盒子*/
+.tab_box #tb4{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rebeccapurple;
+}
+
+/*加载更多*/
+#more{
+    width: 800px;
+    height: 100px;
+    position: relative;
+    background-color:aqua ;
+}
+#more .m1{
+    width: 400px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    left: 200px;
+    top: 40px;
+    line-height: 60px;
+    /*margin-top: 40px;*/
+    /*margin-left: 200px;*/
+
+    background-color: mediumspringgreen;
+}
+
+
+/*主体右边部分*/
+#other{
+    width:360px;
+    height:1200px;
+    background-color: gold;
+    float: right;
+}
+
+
+#other .th{
+    width: 320px;
+    height: 100%;
+    margin: auto;
+    font-size: 20px;
+    /*background-color: darkseagreen;*/
+}
+
+/*右一*/
+#other .th .th1{
+    width:100%;
+    height: 260px;
+    /*background-color: cornflowerblue;*/
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.th1 img{
+    width:320px;
+    height: 200px;
+    margin: auto;
+}
+/*右二*/
+#other .th .th2{
+    width:100%;
+    height: 340px;
+    /*background-color:goldenrod;*/
+}
+.th2 img{
+    width:320px;
+    height: 200px;
+    margin: auto;
+}
+/*右三*/
+#other .th .th3{
+    width:100%;
+    height: 110px;
+    /*background-color:deepskyblue;*/
+}
+/*修改阿里图标样式*/
+.icon-weixin:before{
+    color:green;
+    font-size: 25px;
+}
+.icon-qq:before{
+    color: indianred;
+    font-size: 25px;
+}
+.icon-weibo:before{
+    color: orangered;
+    font-size: 25px;
+}
+
+/*右四*/
+#other .th .th4{
+    width:100%;
+    height: 300px;
+    /*background-color:gainsboro;*/
+}
+.th4 .th4_news{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    /*background-color: blueviolet;*/
+}
+.th4 .th4_news div{
+    width: 200px;
+    font-size: 15px;
+    overflow: hidden;
+    /*省略号*/
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+.th4 .th4_news p{
+    width: 200px;
+    text-align: left;
+}
+.th4 .th4_news img{
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    left: 220px;
+    top: 5px;
+}
+
+
+/*页面尾部*/
+.footer{
+    width: 100%;
+    height: 160px;
+    color: white;
+    background-color: gray;
+}
+.f_logo{
+    width: 1200px;
+    background: url("images/python-logo.png") no-repeat 50px;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0;
+    background-color: gray;
+}
+.f_bottom{
+    text-align: center;
+    line-height: 60px;
+    background-color: black;
+}
+.f_bottom p{
+    width: 1200px;
+    margin: auto;
+}

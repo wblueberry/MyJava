@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /**{margin: 0;padding: 0}*/
+        .header{
+            width: 100%;
+            height: 69px;
+            background-color: black;
+        }
+        .h-box{
+            width: 1200px;
+            height: 69px;
+            margin: auto;
+            background-color: black;
+        }
+        .logo{
+            width: 235px;
+            height: 69px;
+            float: left;
+        }
+        .logo .logo_title{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url("https://www.python.org/static/img/python-logo.png");
+        }
+        .menu{
+            float: left;
+            line-height: 69px;
+            margin-left: 100px;
+        }
+        .menu li{
+            float: left;
+            height: 69px;
+            /*list-style: none;*/
+            padding: 0 30px;
+        }
+        .menu li a{
+            color: white;
+            text-decoration: none;
+        }
+        /*阿里图标*/
+        .l-box{
+            height: 69px;
+            float: right;
+            line-height: 69px;
+            /*background-color: grey;*/
+        }
+        .l-box span a{
+            color:white;
+            text-decoration: none;
+        }
+        .icon-user:before{
+            color:red;
+            font-size: 30px;
+        }
+
+
+
+    </style>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1642118_ptaoe71mbkm.css">
+
+</head>
+<body>
+<div class="header">
+    <div class="h-box">
+        <h1 class="logo">
+            <a href="#" class="logo_title"></a>
+        </h1>
+        <ul class="menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">在线课堂</a></li>
+            <li><a href="#">付费课堂</a></li>
+            <li><a href="#">搜索</a></li>
+        </ul>
+        <!--阿里图标-->
+        <div class="l-box">
+            <span class="iconfont icon-user"></span>
+            <span><a href="#">注册</a> </span>
+            <span><a href="#">登录</a></span>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
