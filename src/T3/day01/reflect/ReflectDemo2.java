@@ -1,36 +1,12 @@
-内容：
-1，Junit单元测试
+package T3.day01.reflect;
 
-测试分类：
-    1，白盒测试：需要写代码。关注程序具体的执行流程
-    2，黑盒测试：不需要写代码，给输入值，看程序能否输出期望的值
-junit使用：白盒测试
-    步骤：
-        1，定义一个测试类（建议：1，类名格式：被测试的类+Test 2，包名：XXX.XXX.XX.test
-        2，定义测试方法：可以独立运行（建议：方法名格式：test+测试的方法名，返回值用void，参数列表：空参）
-        3，给方法加@test注解
-        4，导入Juint的依赖环境
-        5，使用断言来判断测试结果
-@Before:用于资源申请，所有测试方法再执行之前都会先执行该方法
-@After:释放资源的方法，在所有测试方法执行完之后都会自动执行该方法
+import T3.day01.Demo.Person;
 
+import java.lang.reflect.Field;
+import java.util.Objects;
 
-2，反射：框架设计的灵魂
-    框架：半成品软件。可以在框架的基础上进行软件开发，简化编码。
-    反射：将类的各个组成部分封装为其他对象，这就是反射机制
-        好处：
-            1，可以中运行过程中，操作这些对象
-            2，可以解耦，提高程序的可扩展性
-    获取class对象的方式：
-    1，Class.forName("全类名"):将字节码文件加载进内存，返回class对象
-        *多用于配置文件，将类名定义在配置文件中，读取文件，加载类
-    2，类名.class:通过类名的属性class获取
-        *多用于参数的传递
-    3，对象.getClass():getClass()方法在object中定义的
-        *多用于对象的获取字节码的方式
-    结论：同一个字节码文件在一次程序的运行过程中，只会被加载一次，不论通过哪一种方式获取的Class对象都是同一个。
-
-    Class对象的功能：
+/*
+Class对象的功能：
         获取功能：
             1，获取成员变量们
                  1，Field getField(String name)
@@ -61,19 +37,45 @@ junit使用：白盒测试
                  4，Method[] getDeclaredMethods()
                     返回 Method 对象的一个数组，这些对象反映此 Class 对象表示的类或接口声明的所有方法，
                     包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。
-            4，获取类名
+ */
+public class ReflectDemo2 {
+    public static void main(String[] args) throws Exception {
+        //获取Person的Class对象
+        Class person = Person.class;
+        //1，Field getField(String name),就是说获取public修饰的成员变量
+        //返回一个 Field 对象，它反映此 Class 对象所表示的类或接口的指定公共成员字段。
+        Field[] fields = person.getFields();
+        for (Field field : fields) {
+            System.out.println(field);
+        }
 
+        //2，Field[] getFields()
+        //返回一个包含某些 Field 对象的数组，这些对象反映此 Class 对象所表示的类或接口的所有可访问公共字段。
+        Field a = person.getField("a");
+        System.out.println(a);
+        //获取成员变量a的值
+        Person p = new Person();
+        Object value = a.get(p);
+        System.out.println(value);
+        //设置a的值
+        a.set(p,"张三");
+        System.out.println(p);
+        System.out.println("========================================");
 
-            Field:成员变量
-                1，设置值
-                    void set(Object obj,Object value)
-                2，获取值
-                    get(Object obj)
-                3，忽略访问权限修饰符的安全检查(暴力反射)
-                    setAccessible(true);
+        //4，Field[] getDeclaredFields() 获取所有的成员变量，不考虑修饰符
+        //返回 Field 对象的一个数组，这些对象反映此 Class 对象所表示的类或接口所声明的所有字段。
+        Field[] field1 = person.getDeclaredFields();
+        for (Field field : field1) {
+            System.out.println(field);
+        }
 
-            Constructor：构造方法
-                1，创建对象
-3，注解
-什么是注解：说明程序的，给计算机看
+        //3，Field getDeclaredField(String name)
+        //返回一个 Field 对象，该对象反映此 Class 对象所表示的类或接口的指定已声明字段。
+        Field d = person.getDeclaredField("d");
+        //忽略访问权限修饰符的检查
+        d.setAccessible(true);//暴力反射
 
+        Object value2 = d.get(p);
+        System.out.println(value2);
+    }
+}

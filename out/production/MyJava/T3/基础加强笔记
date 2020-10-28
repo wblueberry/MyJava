@@ -11,7 +11,67 @@ junit使用：白盒测试
         3，给方法加@test注解
         4，导入Juint的依赖环境
         5，使用断言来判断测试结果
+@Before:用于资源申请，所有测试方法再执行之前都会先执行该方法
+@After:释放资源的方法，在所有测试方法执行完之后都会自动执行该方法
 
 
-2，反射
+2，反射：框架设计的灵魂
+    框架：半成品软件。可以在框架的基础上进行软件开发，简化编码。
+    反射：将类的各个组成部分封装为其他对象，这就是反射机制
+        好处：
+            1，可以中运行过程中，操作这些对象
+            2，可以解耦，提高程序的可扩展性
+    获取class对象的方式：
+    1，Class.forName("全类名"):将字节码文件加载进内存，返回class对象
+        *多用于配置文件，将类名定义在配置文件中，读取文件，加载类
+    2，类名.class:通过类名的属性class获取
+        *多用于参数的传递
+    3，对象.getClass():getClass()方法在object中定义的
+        *多用于对象的获取字节码的方式
+    结论：同一个字节码文件在一次程序的运行过程中，只会被加载一次，不论通过哪一种方式获取的Class对象都是同一个。
+
+    Class对象的功能：
+        获取功能：
+            1，获取成员变量们
+                 1，Field getField(String name)
+                    返回一个 Field 对象，它反映此 Class 对象所表示的类或接口的指定公共成员字段。
+                 2，Field[] getFields()
+                    返回一个包含某些 Field 对象的数组，这些对象反映此 Class 对象所表示的类或接口的所有可访问公共字段。
+                 3，Field getDeclaredField(String name)
+                    返回一个 Field 对象，该对象反映此 Class 对象所表示的类或接口的指定已声明字段。
+                 4，Field[] getDeclaredFields()
+                    返回 Field 对象的一个数组，这些对象反映此 Class 对象所表示的类或接口所声明的所有字段。
+            2，获取构造方法们
+                 1，Constructor<?>[] getConstructors()
+                    返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法。
+                 2，Constructor<T> getConstructor(Class<?>... parameterTypes)
+                    返回一个 Constructor 对象，它反映此 Class 对象所表示的类的指定公共构造方法。
+                 3，Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)
+                    返回一个 Constructor 对象，该对象反映此 Class 对象所表示的类或接口的指定构造方法。
+                 4，Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)
+                    返回一个 Constructor 对象，该对象反映此 Class 对象所表示的类或接口的指定构造方法。
+            3，获取成员方法们
+                 1， Method getMethod(String name, Class<?>... parameterTypes)
+                     返回一个 Method 对象，它反映此 Class 对象所表示的类或接口的指定公共成员方法。
+                 2，Method[] getMethods()
+                    返回一个包含某些 Method 对象的数组，这些对象反映此 Class 对象所表示的类或接口
+                    （包括那些由该类或接口声明的以及从超类和超接口继承的那些的类或接口）的公共 member 方法。
+                 3， Method getDeclaredMethod(String name, Class<?>... parameterTypes)
+                     返回一个 Method 对象，该对象反映此 Class 对象所表示的类或接口的指定已声明方法。
+                 4，Method[] getDeclaredMethods()
+                    返回 Method 对象的一个数组，这些对象反映此 Class 对象表示的类或接口声明的所有方法，
+                    包括公共、保护、默认（包）访问和私有方法，但不包括继承的方法。
+            4，获取类名
+
+
+            Field:成员变量
+                1，设置值
+                    void set(Object obj,Object value)
+                2，获取值
+                    get(Object obj)
+                3，忽略访问权限修饰符的安全检查(暴力反射)
+                    setAccessible(true);
+
+            Constructor：构造方法
+                1，创建对象
 3，注解
