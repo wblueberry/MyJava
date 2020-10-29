@@ -38,3 +38,5 @@ public interface MyAnno1 extends java.lang.annotation.Annotation {}
         1,@Retention(RetentionPolicy.RUNTIME):当前被描述的注解，会保留到class字节码文件中，并被JVM读取到
     3，@Documented：描述注解是否被抽取到api文档中
     4，@Inherited：描述注解是否被子类继承
+
+在程序中使用（解析）注解：
